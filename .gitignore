@@ -1,107 +1,111 @@
-# Generated files
-.dart_tool/
-.flutter-plugins-dependencies
-.flutter-plugins
-.packages
-build/
-coverage/
-doc/api/
-*.iml
-*.iws
-*.ipr
-.idea/
-.vscode/
+# Global Ignores (Applies to all subdirectories)
 
-# Android specific
-android/app/src/main/assets/flutter_shared_library_debug/
-android/app/src/main/assets/flutter_shared_library_release/
-android/app/src/main/assets/flutter_shared_library_profile/
-android/.gradle/
-android/local.properties
-android/*.keystore
-android/key.properties
-android/gradlew
-android/gradlew.bat
-android/gradle/wrapper/gradle-wrapper.jar
-android/app/build/
-android/app/.cxx/
-android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
-android/app/src/debug/java/io/flutter/plugins/GeneratedPluginRegistrant.java
-android/app/src/profile/java/io/flutter/plugins/GeneratedPluginRegistrant.java
-!android/app/src/main/java/com/your_app_name/MainActivity.java # Keep your MainActivity
+# Generated files common to all Flutter projects
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub/
+**/.pub-cache/
+**/doc/api/
+**/coverage/
 
-# iOS specific
-ios/.symlinks/
-ios/Flutter/Generated.xcconfig
-ios/Flutter/App.framework
-ios/Flutter/flutter_assets/
-ios/Flutter/Flutter.podspec
-ios/Pods/
-ios/.generated/
-ios/*.xcodeproj/project.xcworkspace/
-ios/*.xcodeproj/xcuserdata/
-ios/*.xcworkspace/
-ios/Runner.xcworkspace/
-ios/Runner.xcodeproj/project.xcworkspace/
-ios/Runner.xcodeproj/xcuserdata/
-ios/Runner.xcodeproj/xcshareddata/
-ios/Runner/GeneratedPluginRegistrant.h
-ios/Runner/GeneratedPluginRegistrant.m
-ios/Runner/AppFrameworkInfo.plist
-!ios/Runner/main.m # Keep your main.m
+# Android specific generated files
+**/android/app/build/
+**/android/app/.cxx/
+**/android/.gradle/
+**/android/local.properties
+**/android/*.keystore
+**/android/key.properties
+**/android/gradlew
+**/android/gradlew.bat
+**/android/gradle/wrapper/gradle-wrapper.jar
+**/android/app/src/*/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+# You might specifically ignore APKs/AABs if they are generated inside
+# the project structure
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+# Alternatively, a more general pattern for build outputs:
+# **/*.apk
+# **/*.aab
 
-# macOS specific
-macos/Flutter/GeneratedPluginRegistrant.h
-macos/Flutter/GeneratedPluginRegistrant.m
-macos/Flutter/AppFrameworkInfo.plist
-macos/Runner.xcodeproj/project.xcworkspace/
-macos/Runner.xcodeproj/xcuserdata/
-macos/Runner.xcodeproj/xcshareddata/
-macos/Runner.xcworkspace/
-macos/Pods/
+# iOS specific generated files
+**/ios/.symlinks/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/App.framework/
+**/ios/Flutter/flutter_assets/
+**/ios/Pods/
+**/ios/.generated/
+**/ios/*.xcodeproj/project.xcworkspace/
+**/ios/*.xcodeproj/xcuserdata/
+**/ios/*.xcworkspace/
+**/ios/Runner.xcworkspace/
+**/ios/Runner.xcodeproj/project.xcworkspace/
+**/ios/Runner.xcodeproj/xcuserdata/
+**/ios/Runner.xcodeproj/xcshareddata/
+**/ios/Runner/GeneratedPluginRegistrant.h
+**/ios/Runner/GeneratedPluginRegistrant.m
+**/ios/Runner/AppFrameworkInfo.plist
+**/ios/Flutter/Flutter.podspec # Sometimes this is generated
 
-# Web specific
-web/index.html # You might want to keep this if you modify it
-web/flutter_bootstrap.js # You might want to keep this if you modify it
-web/manifest.json # You might want to keep this if you modify it
+# macOS specific generated files
+**/macos/Flutter/GeneratedPluginRegistrant.h
+**/macos/Flutter/GeneratedPluginRegistrant.m
+**/macos/Flutter/AppFrameworkInfo.plist
+**/macos/Runner.xcodeproj/project.xcworkspace/
+**/macos/Runner.xcodeproj/xcuserdata/
+**/macos/Runner.xcodeproj/xcshareddata/
+**/macos/Runner.xcworkspace/
+**/macos/Pods/
 
-# Windows specific
-windows/flutter/generated_plugin_registrant.cc
-windows/flutter/generated_plugin_registrant.h
-windows/runner/Runner.vcxproj.filters
-windows/runner/Runner.vcxproj.user
-windows/runner/Generated Files/
-windows/runner/flutter_windows.dll
-windows/runner/flutter_windows.lib
-windows/flutter/flutter_wrapper_app.vcxproj
-windows/flutter/flutter_wrapper_app.vcxproj.filters
-windows/flutter/flutter_wrapper_app.vcxproj.user
+# Windows specific generated files
+**/windows/flutter/generated_plugin_registrant.cc
+**/windows/flutter/generated_plugin_registrant.h
+**/windows/runner/Runner.vcxproj.filters
+**/windows/runner/Runner.vcxproj.user
+**/windows/runner/Generated Files/
+**/windows/runner/flutter_windows.dll
+**/windows/runner/flutter_windows.lib
+**/windows/flutter/flutter_wrapper_app.vcxproj
+**/windows/flutter/flutter_wrapper_app.vcxproj.filters
+**/windows/flutter/flutter_wrapper_app.vcxproj.user
 
-# Linux specific
-linux/flutter/generated_plugin_registrant.cc
-linux/flutter/generated_plugin_registrant.h
-linux/runner/generated_plugin_registrant.cc
-linux/runner/generated_plugin_registrant.h
+# Linux specific generated files
+**/linux/flutter/generated_plugin_registrant.cc
+**/linux/flutter/generated_plugin_registrant.h
+**/linux/runner/generated_plugin_registrant.cc
+**/linux/runner/generated_plugin_registrant.h
 
-# VS Code specific
-.vscode/settings.json
-.vscode/launch.json
-.vscode/tasks.json
-
-# IDE specific
-*.iml
-.idea/
-.DS_Store # macOS specific
-
-# Package manager files
-pubspec.lock
-
-# Log files
+# Miscellaneous / OS / IDE specific (applies everywhere)
+*.class
 *.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/ # Important: This will ignore .vscode/ in *all* subdirectories.
+         # If you want to keep .vscode/ for specific project configs,
+         # you might need to negate it with !/namer_app1/.vscode/
+         # or remove this line and manage .vscode/ per project.
 
-# Dependency caching
-.pub-cache/
+# Pubspec lock file - usually committed for applications, but if you want to ignore it globally:
+**/pubspec.lock
 
-# Sensitive information (example - replace with your actual sensitive files)
-# credentials.json
-# config.env
+# Obfuscation and Symbolication files
+**/app.*.symbols
+**/app.*.map.json
+
+# Any specific temporary files or secrets you might create during learning
+# **/.env
+# **/credentials.json
