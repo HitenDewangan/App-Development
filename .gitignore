@@ -1,0 +1,31 @@
+# Generated files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.iml
+*.lock
+*.g.dart # Generated code, e.g., from build_runner
+
+# IDE-specific files
+.idea/
+.vscode/
+*.ipr
+*.iws
+
+# Android specific
+android/.gradle/
+android/app/build/
+android/local.properties
+android/key.properties # Sensitive file, contains keystore information
+android/*.jks # Keystore file
+
+# iOS specific
+ios/Runner.xcworkspace/xcuserdata/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+
+# Other temporary files
+.DS_Store
+.env # Environment variables
