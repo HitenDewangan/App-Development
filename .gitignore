@@ -1,31 +1,107 @@
 # Generated files
 .dart_tool/
-.flutter-plugins
 .flutter-plugins-dependencies
+.flutter-plugins
 .packages
 build/
+coverage/
+doc/api/
 *.iml
-*.lock
-*.g.dart # Generated code, e.g., from build_runner
-
-# IDE-specific files
+*.iws
+*.ipr
 .idea/
 .vscode/
-*.ipr
-*.iws
 
 # Android specific
+android/app/src/main/assets/flutter_shared_library_debug/
+android/app/src/main/assets/flutter_shared_library_release/
+android/app/src/main/assets/flutter_shared_library_profile/
 android/.gradle/
-android/app/build/
 android/local.properties
-android/key.properties # Sensitive file, contains keystore information
-android/*.jks # Keystore file
+android/*.keystore
+android/key.properties
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+android/app/build/
+android/app/.cxx/
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+android/app/src/debug/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+android/app/src/profile/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+!android/app/src/main/java/com/your_app_name/MainActivity.java # Keep your MainActivity
 
 # iOS specific
-ios/Runner.xcworkspace/xcuserdata/
 ios/.symlinks/
 ios/Flutter/Generated.xcconfig
+ios/Flutter/App.framework
+ios/Flutter/flutter_assets/
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/.generated/
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcworkspace/
+ios/Runner.xcworkspace/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/Runner.xcodeproj/xcuserdata/
+ios/Runner.xcodeproj/xcshareddata/
+ios/Runner/GeneratedPluginRegistrant.h
+ios/Runner/GeneratedPluginRegistrant.m
+ios/Runner/AppFrameworkInfo.plist
+!ios/Runner/main.m # Keep your main.m
 
-# Other temporary files
-.DS_Store
-.env # Environment variables
+# macOS specific
+macos/Flutter/GeneratedPluginRegistrant.h
+macos/Flutter/GeneratedPluginRegistrant.m
+macos/Flutter/AppFrameworkInfo.plist
+macos/Runner.xcodeproj/project.xcworkspace/
+macos/Runner.xcodeproj/xcuserdata/
+macos/Runner.xcodeproj/xcshareddata/
+macos/Runner.xcworkspace/
+macos/Pods/
+
+# Web specific
+web/index.html # You might want to keep this if you modify it
+web/flutter_bootstrap.js # You might want to keep this if you modify it
+web/manifest.json # You might want to keep this if you modify it
+
+# Windows specific
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugin_registrant.h
+windows/runner/Runner.vcxproj.filters
+windows/runner/Runner.vcxproj.user
+windows/runner/Generated Files/
+windows/runner/flutter_windows.dll
+windows/runner/flutter_windows.lib
+windows/flutter/flutter_wrapper_app.vcxproj
+windows/flutter/flutter_wrapper_app.vcxproj.filters
+windows/flutter/flutter_wrapper_app.vcxproj.user
+
+# Linux specific
+linux/flutter/generated_plugin_registrant.cc
+linux/flutter/generated_plugin_registrant.h
+linux/runner/generated_plugin_registrant.cc
+linux/runner/generated_plugin_registrant.h
+
+# VS Code specific
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# IDE specific
+*.iml
+.idea/
+.DS_Store # macOS specific
+
+# Package manager files
+pubspec.lock
+
+# Log files
+*.log
+
+# Dependency caching
+.pub-cache/
+
+# Sensitive information (example - replace with your actual sensitive files)
+# credentials.json
+# config.env
