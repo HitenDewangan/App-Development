@@ -100,7 +100,7 @@ migrate_working_dir/
          # or remove this line and manage .vscode/ per project.
 
 # Pubspec lock file - usually committed for applications, but if you want to ignore it globally:
-**/pubspec.lock
+# **/pubspec.lock
 
 # Obfuscation and Symbolication files
 **/app.*.symbols
