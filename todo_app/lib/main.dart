@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/pages/first_page.dart';
+import 'package:todo_app/pages/second_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,28 +17,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold( // Using Scaffold to provide a basic material design layout
-        backgroundColor: const Color.fromARGB(255, 79, 5, 163),
-        
-        body: Stack(
-          children: [
-            Center(
-              child: Text(
-                'Hello, World!',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-        ])
-      ),
       debugShowCheckedModeBanner: false,
+      home: FirstPage(),
+      routes:{
+        '/secondpage': (context) => SecondPage(),
+        '/firstpage': (context) => FirstPage(),
+      }
     );
   }
 }
