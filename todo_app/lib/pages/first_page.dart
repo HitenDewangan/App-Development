@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/pages/second_page.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -10,14 +9,45 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('1st Page'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/secondpage');
-          }, 
-          child: Text('Go to 2nd Page'),
+      drawer: Drawer(
+        backgroundColor: const Color.fromARGB(255, 236, 236, 236),
+        child: Column(
+          children: [
+            // common to place a DrawerHeader at the top of the drawer
+            DrawerHeader(
+              child: Icon(
+                Icons.favorite,
+                size: 48,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 166, 33, 243),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+              ),
+            ),
+
+            // home page list tile
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('H O M E'),
+              onTap: () {
+                Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+
+            // settings page list tile
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('S E T T I N G S'),
+              onTap: () {
+                Navigator.pushNamed(context, '/settingspage');
+              },
+            ),
+          ],
+        )
       ),
-    ),
     );
   }
 }
