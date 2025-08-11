@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
-import '../../models/user_model.dart';
 import '../profile_setup/basic_info_screen.dart';
 
 class RegisterScreen extends StatefulWidget {

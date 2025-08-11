@@ -22,11 +22,9 @@ class AppTheme {
       primary: primaryPink,
       secondary: purple,
       surface: white,
-      background: offWhite,
       onPrimary: white,
       onSecondary: white,
       onSurface: darkGray,
-      onBackground: darkGray,
     ),
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
       headlineLarge: GoogleFonts.poppins(
@@ -86,10 +84,10 @@ class AppTheme {
       ),
       contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: white,
       elevation: 4,
-      shadowColor: lightPink.withOpacity(0.3),
+      shadowColor: lightPink.withValues(alpha: 0.3),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
@@ -115,11 +113,9 @@ class AppTheme {
       primary: primaryPink,
       secondary: lightPurple,
       surface: mediumGray,
-      background: darkGray,
       onPrimary: white,
       onSecondary: darkGray,
       onSurface: white,
-      onBackground: white,
     ),
     textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme).copyWith(
       headlineLarge: GoogleFonts.poppins(
@@ -179,10 +175,10 @@ class AppTheme {
       ),
       contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: mediumGray,
       elevation: 4,
-      shadowColor: Colors.black.withOpacity(0.3),
+      shadowColor: Colors.black.withValues(alpha: 0.3),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),

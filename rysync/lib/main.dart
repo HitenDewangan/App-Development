@@ -12,18 +12,13 @@ class RysyncApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        // Add providers here as needed
-      ],
-      child: MaterialApp(
-        title: 'Rysync - Dating & Relationships',
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.lightTheme,
-        darkTheme: AppTheme.darkTheme,
-        themeMode: ThemeMode.system, // Automatically switch based on system settings
-        home: const SplashScreen(),
-      ),
+    return MaterialApp(
+      title: 'Rysync - Dating & Relationships',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system, // Automatically switch based on system settings
+      home: const SplashScreen(),
     );
   }
 }

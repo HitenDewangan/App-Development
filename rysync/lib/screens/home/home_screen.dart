@@ -173,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
         cardBuilder: (context, index, horizontalThresholdPercentage, verticalThresholdPercentage) {
           return UserCard(
             user: _potentialMatches[index],
-            horizontalThreshold: horizontalThresholdPercentage,
+            horizontalThreshold: horizontalThresholdPercentage.toDouble(),
             onTap: () => _showUserDetails(_potentialMatches[index]),
           );
         },
@@ -356,6 +356,9 @@ class _HomeScreenState extends State<HomeScreen> {
         break;
       case CardSwiperDirection.bottom:
         // Not used
+        break;
+      case CardSwiperDirection.none:
+        // No action needed
         break;
     }
     

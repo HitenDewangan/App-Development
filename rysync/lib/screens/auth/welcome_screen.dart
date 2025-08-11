@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                         boxShadow: [
                           BoxShadow(
-                            color: AppTheme.primaryPink.withOpacity(0.3),
+                            color: AppTheme.primaryPink.withValues(alpha: 0.3),
                             blurRadius: 15,
                             spreadRadius: 3,
                           ),
@@ -203,7 +203,7 @@ class WelcomeScreen extends StatelessWidget {
           width: 48,
           height: 48,
           decoration: BoxDecoration(
-            color: AppTheme.lightPink.withOpacity(0.3),
+            color: AppTheme.lightPink.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(

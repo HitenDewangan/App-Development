@@ -135,7 +135,7 @@ class _AIAssistantScreenState extends State<AIAssistantScreen> {
             child: Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: message.isUser ? AppTheme.primaryPink : AppTheme.lightPink.withOpacity(0.3),
+                color: message.isUser ? AppTheme.primaryPink : AppTheme.lightPink.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.only(
                   topLeft: const Radius.circular(20),
                   topRight: const Radius.circular(20),
@@ -158,7 +158,7 @@ class _AIAssistantScreenState extends State<AIAssistantScreen> {
                     _formatTime(message.timestamp),
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: message.isUser 
-                          ? Colors.white.withOpacity(0.7) 
+                          ? Colors.white.withValues(alpha: 0.7) 
                           : AppTheme.lightGray,
                     ),
                   ),
@@ -192,7 +192,7 @@ class _AIAssistantScreenState extends State<AIAssistantScreen> {
         color: Theme.of(context).scaffoldBackgroundColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
@@ -210,7 +210,7 @@ class _AIAssistantScreenState extends State<AIAssistantScreen> {
                   borderSide: BorderSide.none,
                 ),
                 filled: true,
-                fillColor: AppTheme.lightPink.withOpacity(0.2),
+                fillColor: AppTheme.lightPink.withValues(alpha: 0.2),
                 contentPadding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 12,
