@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:todo_list_app/data/database.dart';
 import 'package:todo_list_app/util/dialog_box.dart';
 import 'package:todo_list_app/util/todo_tile.dart';
 
@@ -10,27 +13,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // reference to the Hive box
+  final _myBox = Hive.box('mybox');
+  ToDoDatabase tdb = ToDoDatabase();
+
+  @override
+  void initState() {
+    
+    //  if it's the first time opening the app, create initial data
+    if (_myBox.get('TODOLIST') == null) {
+      tdb.createInitialData();
+    } else {
+      //  load the data from the database
+      tdb.loadData();
+    }
+  }
 
   // controller for text field
   final _controller = TextEditingController();
 
-
-  // list of todo tasks
-  List toDoList = [
-    ['Make Tutorial', true],
-    ['Do Exercise', false],
-    ['Buy Milk', false],
-    ['Read Book', true],
-    ['Walk the Dog', false],
-    ['Clean the House', false],
-    ['Plan Vacation', true],
-  ];
-
   // checkbox changed
   void checkBoxChanged(bool? value, int index) {
     setState(() {
-      toDoList[index][1] = !toDoList[index][1];
+      tdb.toDoList[index][1] = !tdb.toDoList[index][1];
     });
+    // update the database
+    tdb.updateDataBase();
   }
 
   // create new task
@@ -49,10 +57,21 @@ class _HomePageState extends State<HomePage> {
   // save new task
   void saveNewTask() {
     setState(() {
-      toDoList.add([_controller.text, false]);
+      tdb.toDoList.add([_controller.text, false]);
       _controller.clear();
     });
     Navigator.of(context).pop();
+    // update the database
+    tdb.updateDataBase();
+  }
+
+  // delete task
+  void deleteTask(BuildContext context, int index) {
+    setState(() {
+      tdb.toDoList.removeAt(index);
+    });
+    // update the database
+    tdb.updateDataBase();
   }
 
   @override
@@ -71,12 +90,13 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.indigo[200],
       ),
       body: ListView.builder(
-        itemCount: toDoList.length,
+        itemCount: tdb.toDoList.length,
         itemBuilder: (context, index) {
           return ToDoTile(
-            taskName: toDoList[index][0],
-            taskCompleted: toDoList[index][1],
+            taskName: tdb.toDoList[index][0],
+            taskCompleted: tdb.toDoList[index][1],
             onChanged: (value) => checkBoxChanged(value, index),
+            deleteTask: (context) => deleteTask(context, index),
           );
         },
       ),
